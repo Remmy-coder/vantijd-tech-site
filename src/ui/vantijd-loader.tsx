@@ -5,7 +5,6 @@ export default function VantijdLoader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate content loading time
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2500);
@@ -13,7 +12,6 @@ export default function VantijdLoader() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Letter animation variants
   const letterVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -36,7 +34,6 @@ export default function VantijdLoader() {
     }),
   };
 
-  // Container animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -109,7 +106,6 @@ export default function VantijdLoader() {
           </div>
         </motion.div>
 
-        {/* Loading indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
