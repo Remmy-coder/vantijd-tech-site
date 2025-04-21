@@ -16,4 +16,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/vantijd-tech-site/", // Match your repo name
+  build: {
+    outDir: "dist",
+  },
 });

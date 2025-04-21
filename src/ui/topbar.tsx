@@ -31,7 +31,10 @@ export default function Topbar() {
   const orbitX = Math.cos(orbitAngle * (Math.PI / 180)) * orbitRadius;
   const orbitY = Math.sin(orbitAngle * (Math.PI / 180)) * orbitRadius;
 
-  const menuItems = ["Home", "Services", "About"];
+  const menuItems = [{ name: "Home", link: "/" }, {
+    name: "Services",
+    link: "#services",
+  }, { name: "About", link: "#about" }];
 
   return (
     <motion.header
@@ -57,19 +60,18 @@ export default function Topbar() {
               zIndex: 5,
             }}
           />
-
         </div>
 
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             {menuItems.map((item) => (
-              <li key={item}>
+              <li key={item.name}>
                 <motion.a
-                  href="#"
+                  href={item.link}
                   className="text-white transition-colors"
                   whileHover={{ color: "#0ff" }}
                 >
-                  {item}
+                  {item.name}
                 </motion.a>
               </li>
             ))}
@@ -127,14 +129,14 @@ export default function Topbar() {
         <div className="px-6 py-4">
           <ul className="space-y-4">
             {menuItems.map((item) => (
-              <li key={item}>
+              <li key={item.name}>
                 <motion.a
-                  href="#"
+                  href={item.link}
                   className="text-white text-lg block py-2"
                   whileHover={{ color: "#0ff", x: 5 }}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item}
+                  {item.name}
                 </motion.a>
               </li>
             ))}

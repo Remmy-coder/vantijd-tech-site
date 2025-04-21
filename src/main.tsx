@@ -7,7 +7,7 @@ import "@mantine/core/styles.css";
 
 import { MantineProvider } from "@mantine/core";
 
-const router = createRouter({ routeTree });
+const router = createRouter({ routeTree, basepath: import.meta.env.BASE_URL });
 
 declare module "@tanstack/react-router" {
   interface Register {

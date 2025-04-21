@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="bg-black text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div className="space-y-4">
             <motion.div
               initial={{ opacity: 0 }}
@@ -23,7 +22,6 @@ export default function Footer() {
             </motion.div>
           </div>
 
-          {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="text-white text-lg font-semibold mb-4">
               Quick Links
@@ -46,7 +44,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
           <div className="space-y-4">
             <h4 className="text-white text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
@@ -69,12 +66,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-white text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <MapPinIcon className="h-5 w-5 flex-shrink-0 text-blue-400" />
+                <MapPinIcon className="h-5 w-5 flex-shrink-0 text-cyan-400" />
                 <p className="text-sm">
                   123 Business Street, Tech City, TC 12345
                 </p>
@@ -83,13 +79,13 @@ export default function Footer() {
                 <PhoneIcon className="h-5 w-5 text-blue-400" />
                 <a
                   href="tel:+1234567890"
-                  className="text-sm hover:text-blue-400"
+                  className="text-sm hover:text-cyan-400"
                 >
                   +1 (234) 567-890
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <LetterTextIcon className="h-5 w-5 text-blue-400" />
+                <LetterTextIcon className="h-5 w-5 text-cyan-400" />
                 <a
                   href="mailto:info@company.com"
                   className="text-sm hover:text-blue-400"
@@ -101,7 +97,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

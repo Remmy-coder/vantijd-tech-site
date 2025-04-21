@@ -34,17 +34,17 @@ export default function Hero() {
 
   return (
     <motion.main
+      id="#"
       className="relative h-screen flex items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       style={{
-        backgroundImage: "url('/hero3.jpg')", // Replace with your actual image URL
+        backgroundImage: `url(${import.meta.env.BASE_URL}hero3.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Glass overlay */}
       <div className="absolute inset-0 bg-opacity-100 backdrop-blur-sm grayscale-80">
       </div>
 
@@ -84,18 +84,24 @@ export default function Hero() {
           animate={controls}
         >
           <motion.button
-            className="px-6 sm:px-8 py-3 bg-cyan-800 text-white font-semibold rounded-lg shadow-lg w-full sm:w-auto"
+            className="px-6 sm:px-8 py-3 bg-cyan-800 text-white font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
             whileHover={{
               scale: 1.05,
               backgroundColor: "", // blue-500
             }}
             transition={{ type: "spring", stiffness: 300 }}
+            onClick={() => {
+              const servicesSection = document.getElementById("services");
+              if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Our Services
           </motion.button>
 
           <motion.button
-            className="px-6 sm:px-8 py-3 bg-transparent border-2 border-cyan-800 text-blue-100 font-semibold rounded-lg shadow-lg w-full sm:w-auto"
+            className="px-6 sm:px-8 py-3 bg-transparent border-2 border-cyan-800 text-blue-100 font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
             whileHover={{
               scale: 1.05,
               backgroundColor: "", // blue-700 with opacity
