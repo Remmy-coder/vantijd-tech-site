@@ -21,7 +21,7 @@ export default function ServicesCarousel() {
       ],
       icon: (
         <Code
-          className="h-10 w-10 text-cyan-800"
+          className="h-10 w-10 text-gray-600"
           aria-label="Web Development icon"
         />
       ),
@@ -34,7 +34,7 @@ export default function ServicesCarousel() {
       features: ["iOS & Android", "Real-time Updates", "Offline Functionality"],
       icon: (
         <Smartphone
-          className="h-10 w-10 text-cyan-800"
+          className="h-10 w-10 text-gray-600"
           aria-label="Mobile Applications icon"
         />
       ),
@@ -51,7 +51,7 @@ export default function ServicesCarousel() {
       ],
       icon: (
         <Cpu
-          className="h-10 w-10 text-cyan-800"
+          className="h-10 w-10 text-gray-600"
           aria-label="AI Solutions icon"
         />
       ),
@@ -98,7 +98,7 @@ export default function ServicesCarousel() {
   return (
     <section
       id="services"
-      className="min-h-screen bg-gradient-to-b from-white to-cyan-50 py-16 px-4 sm:px-8 lg:px-16"
+      className="min-h-screen bg-gradient-to-b from-white to-gray-300 py-16 px-4 sm:px-8 lg:px-16"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -114,14 +114,14 @@ export default function ServicesCarousel() {
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-cyan-800 text-sm font-medium mb-2">
+              <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-gray-900 text-sm font-medium mb-2">
                 What We Offer
               </span>
             </motion.div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-cyan-900 tracking-tight">
-              Our <span className="text-cyan-600">Expert</span> Services
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 tracking-wide">
+              Our <span className="text-blue-500">Expert</span> Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-900 max-w-2xl mx-auto leading-relaxed">
               Empowering businesses with tailored digital solutions for
               tomorrow's challenges. We blend creativity with technical
               expertise to deliver outstanding results.
@@ -131,7 +131,7 @@ export default function ServicesCarousel() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-24 items-center">
           <div
-            className="relative h-[480px] rounded-3xl shadow-xl bg-gradient-to-br from-cyan-100 to-cyan-800 border border-gray-200/60 overflow-hidden hidden lg:block"
+            className="relative h-[480px] rounded-3xl shadow-xl bg-gradient-to-br from-white to-gray-500 border border-gray-50 overflow-hidden hidden lg:block"
             onMouseEnter={() => setIsAutoplayPaused(true)}
             onMouseLeave={() => setIsAutoplayPaused(false)}
           >
@@ -147,13 +147,13 @@ export default function ServicesCarousel() {
                 className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center"
               >
                 <motion.div
-                  className="mb-6 p-6 bg-cyan-100/30 backdrop-blur-sm rounded-2xl"
+                  className="mb-6 p-6 bg-white backdrop-blur-sm rounded-2xl"
                   animate={{ rotateY: [0, 360] }}
                   transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }}
                 >
                   {services[currentIndex].icon}
                 </motion.div>
-                <h3 className="text-2xl font-bold text-cyan-50 mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {services[currentIndex].title}
                 </h3>
                 <p className="bg-white/90 text-gray-700 font-medium text-sm py-3 px-6 rounded-full shadow-sm border border-gray-200 mb-4">
@@ -163,7 +163,7 @@ export default function ServicesCarousel() {
                   {services[currentIndex].features.map((feature, idx) => (
                     <span
                       key={idx}
-                      className="bg-cyan-700/70 text-white text-xs py-1 px-3 rounded-full"
+                      className="bg-black text-white text-xs py-1 px-3 rounded-full"
                     >
                       {feature}
                     </span>
@@ -190,7 +190,7 @@ export default function ServicesCarousel() {
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-sm p-2 rounded-full transition-all"
               aria-label="Previous slide"
             >
-              <ChevronLeft className="h-5 w-5 text-cyan-900" />
+              <ChevronLeft className="h-5 w-5 text-black" />
             </button>
 
             <button
@@ -198,7 +198,7 @@ export default function ServicesCarousel() {
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-sm p-2 rounded-full transition-all"
               aria-label="Next slide"
             >
-              <ChevronRight className="h-5 w-5 text-cyan-900" />
+              <ChevronRight className="h-5 w-5 text-black" />
             </button>
           </div>
 
@@ -217,8 +217,8 @@ export default function ServicesCarousel() {
                 }`}
               >
                 <div
-                  className={`p-4 bg-cyan-100/40 rounded-xl shadow-inner transition-all duration-300 ${
-                    hovered === idx ? "bg-cyan-200/70" : ""
+                  className={`p-4 bg-gray-100 rounded-xl shadow-inner transition-all duration-300 ${
+                    hovered === idx ? "bg-white" : ""
                   }`}
                 >
                   <motion.div
@@ -230,7 +230,7 @@ export default function ServicesCarousel() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <h4 className="text-xl font-semibold text-cyan-900 mb-2">
+                    <h4 className="text-xl font-semibold text-black mb-2">
                       {service.title}
                     </h4>
                     <motion.div
@@ -242,7 +242,7 @@ export default function ServicesCarousel() {
                       }}
                     >
                       <ChevronRight
-                        className={`h-5 w-5 text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity`}
+                        className={`h-5 w-5 text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity`}
                       />
                     </motion.div>
                   </div>
@@ -253,7 +253,7 @@ export default function ServicesCarousel() {
                     {service.features.map((feature, fIdx) => (
                       <span
                         key={fIdx}
-                        className="text-xs py-1 px-2 bg-cyan-50 text-cyan-700 rounded-md border border-cyan-100"
+                        className="text-xs py-1 px-2 bg-gray-500 text-white rounded-md border border-white"
                       >
                         {feature}
                       </span>
@@ -268,7 +268,7 @@ export default function ServicesCarousel() {
             >
               <a
                 href="#contact"
-                className="inline-block mt-6 py-3 px-8 bg-cyan-700 hover:bg-cyan-800 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                className="inline-block mt-6 py-3 px-8 bg-gray-500 hover:bg-gray-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Discuss Your Project
               </a>

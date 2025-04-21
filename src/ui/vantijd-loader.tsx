@@ -75,7 +75,7 @@ export default function VantijdLoader() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute h-48 w-48 rounded-full bg-cyan-400/20 blur-xl"
+          className="absolute h-48 w-48 rounded-full bg-gray-400 blur-xl"
         />
 
         {/* Company name */}
@@ -98,7 +98,7 @@ export default function VantijdLoader() {
                 variants={letterVariants}
                 className={`font-bold text-2xl md:text-3xl ${
                   letter === " " ? "w-2" : ""
-                } ${i < 7 ? "text-cyan-400" : "text-cyan-200"}`}
+                } ${i < 7 ? "text-gray-400" : "text-gray-200"}`}
               >
                 {letter}
               </motion.span>
@@ -122,9 +122,9 @@ export default function VantijdLoader() {
                     duration: 0.6,
                     repeat: Infinity,
                     delay: i * 0.1,
-                    ease: "easeInOut",
+                    ease: "backInOut",
                   }}
-                  className="inline-block text-sm text-cyan-300"
+                  className="inline-block text-sm text-gray-300"
                 >
                   {letter}
                 </motion.span>
@@ -136,7 +136,7 @@ export default function VantijdLoader() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="mt-2 h-0.5 w-16 origin-left rounded-full bg-gradient-to-r from-cyan-400 to-cyan-600 mx-auto"
+            className="mt-2 h-0.5 w-16 origin-left rounded-full bg-gradient-to-r from-gray-200 to-gray-600 mx-auto"
           />
         </motion.div>
       </div>

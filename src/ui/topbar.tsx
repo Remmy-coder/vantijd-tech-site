@@ -31,27 +31,27 @@ export default function Topbar() {
   const orbitX = Math.cos(orbitAngle * (Math.PI / 180)) * orbitRadius;
   const orbitY = Math.sin(orbitAngle * (Math.PI / 180)) * orbitRadius;
 
-  const menuItems = [{ name: "Home", link: "/" }, {
+  const menuItems = [{ name: "Home", link: `${import.meta.env.BASE_URL}` }, {
     name: "Services",
     link: "#services",
   }, { name: "About", link: "#about" }];
 
   return (
     <motion.header
-      className="bg-black z-50"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm"
       style={{ boxShadow }}
     >
       <div className="px-8 py-4 flex justify-between items-center">
         <div className="relative">
           <motion.div
-            className="text-white font-bold text-xl cursor-pointer relative z-10"
+            className="text-black font-bold text-xl cursor-pointer relative z-10"
             whileHover={{ scale: 1.05 }}
           >
             VT
           </motion.div>
 
           <motion.div
-            className="absolute w-2 h-2 bg-white rounded-full"
+            className="absolute w-2 h-2 bg-black rounded-full"
             style={{
               top: "35%",
               left: "40%",
@@ -68,8 +68,8 @@ export default function Topbar() {
               <li key={item.name}>
                 <motion.a
                   href={item.link}
-                  className="text-white transition-colors"
-                  whileHover={{ color: "#0ff" }}
+                  className="text-black transition-colors"
+                  whileHover={{ color: "gray" }}
                 >
                   {item.name}
                 </motion.a>
@@ -80,7 +80,7 @@ export default function Topbar() {
 
         <div className="md:hidden">
           <motion.button
-            className="text-white p-2"
+            className="text-black p-2"
             onClick={toggleMenu}
             whileTap={{ scale: 0.9 }}
           >
@@ -123,7 +123,7 @@ export default function Topbar() {
         transition={{ duration: 0.3 }}
         style={{
           overflow: "hidden",
-          backgroundColor: "rgba(0, 0, 0, 0.9)",
+          backgroundColor: "transparent",
         }}
       >
         <div className="px-6 py-4">
@@ -132,8 +132,8 @@ export default function Topbar() {
               <li key={item.name}>
                 <motion.a
                   href={item.link}
-                  className="text-white text-lg block py-2"
-                  whileHover={{ color: "#0ff", x: 5 }}
+                  className="text-black text-lg block py-2"
+                  whileHover={{ color: "gray", x: 5 }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

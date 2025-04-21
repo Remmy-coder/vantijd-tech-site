@@ -70,7 +70,7 @@ export default function Footer() {
             <h4 className="text-white text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <MapPinIcon className="h-5 w-5 flex-shrink-0 text-cyan-400" />
+                <MapPinIcon className="h-5 w-5 flex-shrink-0 text-blue-400" />
                 <p className="text-sm">
                   123 Business Street, Tech City, TC 12345
                 </p>
@@ -79,13 +79,13 @@ export default function Footer() {
                 <PhoneIcon className="h-5 w-5 text-blue-400" />
                 <a
                   href="tel:+1234567890"
-                  className="text-sm hover:text-cyan-400"
+                  className="text-sm hover:text-blue-400"
                 >
                   +1 (234) 567-890
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <LetterTextIcon className="h-5 w-5 text-cyan-400" />
+                <LetterTextIcon className="h-5 w-5 text-blue-400" />
                 <a
                   href="mailto:info@company.com"
                   className="text-sm hover:text-blue-400"

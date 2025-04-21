@@ -54,7 +54,8 @@ export default function Hero() {
         </h1>
 
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl text-cyan-100 mb-6 sm:mb-8"
+          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8"
+
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
@@ -84,7 +85,7 @@ export default function Hero() {
           animate={controls}
         >
           <motion.button
-            className="px-6 sm:px-8 py-3 bg-cyan-800 text-white font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
+            className="px-6 sm:px-8 py-3 bg-black text-white font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
             whileHover={{
               scale: 1.05,
               backgroundColor: "", // blue-500
@@ -101,7 +102,7 @@ export default function Hero() {
           </motion.button>
 
           <motion.button
-            className="px-6 sm:px-8 py-3 bg-transparent border-2 border-cyan-800 text-blue-100 font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
+            className="px-6 sm:px-8 py-3 bg-transparent border-2 border-black text-white font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
             whileHover={{
               scale: 1.05,
               backgroundColor: "", // blue-700 with opacity
