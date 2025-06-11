@@ -34,7 +34,7 @@ export default function Footer() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <a
-                    href="#"
+                    href=""
                     className="text-sm hover:text-blue-400 transition-colors"
                   >
                     {link}
@@ -56,7 +56,7 @@ export default function Footer() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <a
-                    href="#"
+                    href=""
                     className="text-sm hover:text-blue-400 transition-colors"
                   >
                     {link}
@@ -72,25 +72,26 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPinIcon className="h-5 w-5 flex-shrink-0 text-blue-400" />
                 <p className="text-sm">
-                  123 Business Street, Tech City, TC 12345
+                  Plot 1505, Ilure Arowasafe Cresent, First Estate, Amuwo Odofin
+                  GRA Lagos.
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <PhoneIcon className="h-5 w-5 text-blue-400" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+2348106582590"
                   className="text-sm hover:text-blue-400"
                 >
-                  +1 (234) 567-890
+                  +234 810 658 2590
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <LetterTextIcon className="h-5 w-5 text-blue-400" />
                 <a
-                  href="mailto:info@company.com"
+                  href="mailto:remmyomeje@gmail.com"
                   className="text-sm hover:text-blue-400"
                 >
-                  info@company.com
+                  remmyomeje@gmail.com
                 </a>
               </div>
             </div>

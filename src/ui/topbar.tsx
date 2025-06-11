@@ -44,17 +44,17 @@ export default function Topbar() {
       <div className="px-8 py-4 flex justify-between items-center">
         <div className="relative">
           <motion.div
-            className="text-black font-bold text-xl cursor-pointer relative z-10"
+            className="text-black bg-gray-300 hover:bg-gray-100 px-2 rounded-full font-bold text-xl cursor-pointer relative z-10"
             whileHover={{ scale: 1.05 }}
           >
-            VT
+            V
           </motion.div>
 
           <motion.div
             className="absolute w-2 h-2 bg-black rounded-full"
             style={{
-              top: "35%",
-              left: "40%",
+              top: "38%",
+              left: "38%",
               x: orbitX,
               y: orbitY,
               zIndex: 5,
