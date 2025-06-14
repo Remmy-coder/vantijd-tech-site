@@ -55,7 +55,6 @@ export default function Hero() {
 
         <motion.p
           className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8"
-
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
@@ -88,11 +87,11 @@ export default function Hero() {
             className="px-6 sm:px-8 py-3 bg-black text-white font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
             whileHover={{
               scale: 1.05,
-              backgroundColor: "", // blue-500
+              backgroundColor: "", 
             }}
             transition={{ type: "spring", stiffness: 300 }}
             onClick={() => {
-              const servicesSection = document.getElementById("services");
+              const servicesSection = document.getElementById("#services");
               if (servicesSection) {
                 servicesSection.scrollIntoView({ behavior: "smooth" });
               }
@@ -105,10 +104,16 @@ export default function Hero() {
             className="px-6 sm:px-8 py-3 bg-transparent border-2 border-black text-white font-semibold rounded-lg shadow-lg w-full sm:w-auto cursor-pointer"
             whileHover={{
               scale: 1.05,
-              backgroundColor: "", // blue-700 with opacity
+              backgroundColor: "", 
               color: "#ffffff",
             }}
             transition={{ type: "spring", stiffness: 300 }}
+            onClick={() => {
+              const footerSection = document.getElementById("#footer");
+              if (footerSection) {
+                footerSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Contact Us
           </motion.button>

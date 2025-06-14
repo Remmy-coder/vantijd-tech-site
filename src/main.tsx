@@ -6,6 +6,7 @@ import "./index.css";
 import "@mantine/core/styles.css";
 
 import { MantineProvider } from "@mantine/core";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createRouter({ routeTree, basepath: import.meta.env.BASE_URL });
 
@@ -20,9 +21,11 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <StrictMode>
-      <MantineProvider>
-        <RouterProvider router={router} />
-      </MantineProvider>
+      <HelmetProvider>
+        <MantineProvider>
+          <RouterProvider router={router} />
+        </MantineProvider>
+      </HelmetProvider>
     </StrictMode>,
   );
 }

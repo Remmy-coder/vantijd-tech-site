@@ -31,10 +31,11 @@ export default function Topbar() {
   const orbitX = Math.cos(orbitAngle * (Math.PI / 180)) * orbitRadius;
   const orbitY = Math.sin(orbitAngle * (Math.PI / 180)) * orbitRadius;
 
-  const menuItems = [{ name: "Home", link: `${import.meta.env.BASE_URL}` }, {
-    name: "Services",
-    link: "#services",
-  }, { name: "About", link: "#about" }];
+  const menuItems = [
+    { name: "Home", link: `${import.meta.env.BASE_URL}` },
+    { name: "Services", link: "#services" },
+    { name: "About", link: "#about" },
+  ];
 
   return (
     <motion.header
@@ -67,9 +68,15 @@ export default function Topbar() {
             {menuItems.map((item) => (
               <li key={item.name}>
                 <motion.a
-                  href={item.link}
-                  className="text-black transition-colors"
-                  whileHover={{ color: "gray" }}
+                  onClick={() => {
+                    const section = document.getElementById(item.link);
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="text-black transition-colors cursor-pointer"
+                  whileHover={{ color: "#808080" }}
+                  style={{ color: "#000000" }}
                 >
                   {item.name}
                 </motion.a>
@@ -131,10 +138,20 @@ export default function Topbar() {
             {menuItems.map((item) => (
               <li key={item.name}>
                 <motion.a
-                  href={item.link}
                   className="text-black text-lg block py-2"
-                  whileHover={{ color: "gray", x: 5 }}
-                  onClick={() => setIsMenuOpen(false)}
+                  whileHover={{ color: "#808080", x: 5 }}
+                  style={{ color: "#000000" }}
+                  onClick={() => {
+                    const section = document.getElementById(item.link);
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                      setTimeout(() => {
+                        setIsMenuOpen(false);
+                      }, 300);
+                    } else {
+                      setIsMenuOpen(false);
+                    }
+                  }}
                 >
                   {item.name}
                 </motion.a>

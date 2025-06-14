@@ -3,7 +3,7 @@ import { LetterTextIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300">
+    <footer id="#footer" className="bg-black text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -88,10 +88,10 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <LetterTextIcon className="h-5 w-5 text-blue-400" />
                 <a
-                  href="mailto:remmyomeje@gmail.com"
+                  href="mailto:info@vantijd.com"
                   className="text-sm hover:text-blue-400"
                 >
-                  remmyomeje@gmail.com
+                  info@vantijd.com
                 </a>
               </div>
             </div>

@@ -7,7 +7,7 @@ export default function VantijdLoader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -63,7 +63,6 @@ export default function VantijdLoader() {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black"
     >
       <div className="relative flex flex-col items-center">
-        {/* Glowing circle */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0.1 }}
           animate={{
@@ -78,7 +77,6 @@ export default function VantijdLoader() {
           className="absolute h-48 w-48 rounded-full bg-gray-400 blur-xl"
         />
 
-        {/* Company name */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -86,7 +84,6 @@ export default function VantijdLoader() {
           exit="exit"
           className="relative z-10 mb-8 mt-4"
         >
-          {/* Vantijd Text */}
           <div className="flex justify-center">
             {["V", "a", "n", "t", "i", "j", "d", " ", "T", "e", "c", "h"].map((
               letter,
